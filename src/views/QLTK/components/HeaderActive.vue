@@ -3,7 +3,7 @@
     <v-alert  color="info" height="80px">
       path
       <br>
-      Tài khoản đang hoạt động.
+      <slot></slot>
     </v-alert>
   </div>
 </template>

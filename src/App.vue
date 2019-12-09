@@ -25,13 +25,20 @@
                 </v-list-item-content>
               </v-list-item>
             </template>
-            <v-list-item v-for="(child, i) in item.children" :key="i" link>
-              <v-list-item-action v-if="child.icon">
-                <v-icon>{{ child.icon }}</v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>{{ child.text }}</v-list-item-title>
-              </v-list-item-content>
+            <v-list-item
+              v-for="(child, i) in item.children"
+              :key="i"
+              link
+              :to="{ name: child.url }"
+            >
+              <div>
+                <v-list-item-action v-if="child.icon">
+                  <v-icon>{{ child.icon }}</v-icon>
+                </v-list-item-action>
+                <v-list-item-content>
+                  <v-list-item-title>{{ child.text }}</v-list-item-title>
+                </v-list-item-content>
+              </div>
             </v-list-item>
           </v-list-group>
           <v-list-item v-else :key="item.text" link>
@@ -46,9 +53,22 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app clipped-left>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Application</v-toolbar-title>
+    <v-app-bar app clipped-left row>
+      <div class="col-md-1" style="flex: 0 0 5.333333%;">
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      </div>
+      <div class="col-md-2">
+        <v-toolbar-title>HT-ACTIVE</v-toolbar-title>
+      </div>
+      <div class="col-md-9">
+        <div class="row d-flex flex-row-reverse">
+          <v-btn style="margin-top: 3px; margin-left:5px">User</v-btn>
+
+          <!-- <v-btn color="primary" fab small dark>
+            <v-icon>mdi-account-circle</v-icon>
+          </v-btn> -->
+        </div>
+      </div>
     </v-app-bar>
 
     <v-content>
@@ -74,9 +94,9 @@ export default {
         text: "Quản Lý Tài Khoản",
         model: false,
         children: [
-          { text: "Tài khoản đang hoạt động" },
-          { text: "Tài khoản đang bị khóa" },
-          { text: "Quản lý quyền tài khoản" }
+          { text: "Tài khoản đang hoạt động", url: "active" },
+          { text: "Tài khoản đang bị khóa", url: "block" },
+          { text: "Quản lý quyền tài khoản", url: "manageacc" }
         ]
       },
       {
@@ -85,8 +105,8 @@ export default {
         text: "Quản Lý Nhân Viên",
         model: false,
         children: [
-          { text: "Nhân viên đang hoạt động" },
-          { text: "Nhân viên đã rời công ty" }
+          { text: "Nhân viên đang hoạt động", url: "EmployeeActive" },
+          { text: "Nhân viên đã rời công ty", url: "EmployeeBlock" }
         ]
       },
       {
@@ -95,8 +115,8 @@ export default {
         text: "Quản lý thực tập sinh",
         model: false,
         children: [
-          { text: "Thực tập sinh đang hoạt động" },
-          { text: "Thực tập sinh đã rời công ty" }
+          { text: "Thực tập sinh đang hoạt động", url: "InternActive" },
+          { text: "Thực tập sinh đã rời công ty", url: "InternBlock" }
         ]
       },
       {
