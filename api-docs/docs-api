@@ -1,0 +1,2254 @@
+{
+	"info": {
+		"_postman_id": "22b6026e-5f5e-4d93-96e9-0ac802b4fe91",
+		"name": "tool-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"xuanduyrn\",\n\t\"email\":\"xuanduyrn@gmail.com\",\n\t\"password\":\"12345678\",\n\t\"full_name\":\"Phạm Xuân Duy\",\n\t\"sex_type\": true,\n\t\"address\":\"Dũng sĩ - Thanh Khê - Đà nẵng\",\n\t\"phoneNumber\":\"0865675232\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signUp-confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"verificationCode\": \"1733\",\n\t\"email\": \"xuanduyrn@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/signUp-confirm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"signUp-confirm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signIn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" :\"xuanduyrn@gmail.com\",\n\t\"password\" : \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/signIn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgot-password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"xuanduyrn@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/forgot-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset-password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"verificationCode\":\"5095\",\n\t\"email\" : \"xuanduyrn@gmail.com\",\n\t\"newPassword\": \"12345678\",\n\t\"verifyPassword\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/reset-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resend-email-forgot-password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"xuanduyrn@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/resend-email-forgot-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"resend-email-forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/update-password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzQ1MTM1ODEsImV4cCI6MTU3NTExODM4MX0.4NVC01QfHHRnyfRxavUrzWVqsdEZXRHchfRRRkmRkSU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/update-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"update-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/create-account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUyNTM0NjcsImV4cCI6MTU3NTg1ODI2N30.R_R1tM_XVC3yGmUyhSXFwxcptmQWFzfXPPcB7BATpI0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"useraccount\",\n\t\"email\":\"useraccount@gmail.com\",\n\t\"password\":\"12345678\",\n\t\"full_name\":\"user 1\",\n\t\"sex_type\": true,\n\t\"birthday\" :\"1996-09-28T08:03:18.612+00:00\",\n\t\"address\":\"Dũng sĩ - Thanh Khê - Đà nẵng\",\n\t\"phoneNumber\":\"0865675232\",\n    \"startDate\": \"2019-11-23T08:03:18.612+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/create-account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"create-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/get-me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/user/get-me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"get-me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/:userId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzQ1MTM1ODEsImV4cCI6MTU3NTExODM4MX0.4NVC01QfHHRnyfRxavUrzWVqsdEZXRHchfRRRkmRkSU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/user/5dd8e7c600e35c3d80827466",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"5dd8e7c600e35c3d80827466"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/get-all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUyNTM0NjcsImV4cCI6MTU3NTg1ODI2N30.R_R1tM_XVC3yGmUyhSXFwxcptmQWFzfXPPcB7BATpI0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"blocked\": false,\n\t\"sort\": {\n\t\t\"startDate\": -1,\n\t\t\"endDate\": -1,\n\t\t\"full_name\": -1,\n\t\t\"phoneNumber\": -1,\n\t\t\"email\": -1,\n\t\t\"username\": -1\n\t},\n\t\"filter\": {\n\t\t\"startDate\": \"2019-04-27T08:42:25.397Z\",\n\t\t\"endDate\" : \"2019-09-28T08:42:25.397Z\",\n\t\t\"full_name\": \"P\",\n\t\t\"phoneNumber\": \"0865675232\",\n\t\t\"email\": \"abc@gmail.com\",\n\t\t\"username\": \"abc\"\n\t},\n\t\"pagination\": {\n\t\t\"pageSize\": 10,\n\t\t\"page\": 1\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/:userId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUyNTM0NjcsImV4cCI6MTU3NTg1ODI2N30.R_R1tM_XVC3yGmUyhSXFwxcptmQWFzfXPPcB7BATpI0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/user/remove-account/5de7c0bb8e95495c6c385ec7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"remove-account",
+						"5de7c0bb8e95495c6c385ec7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/update-profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzQ1MTM1ODEsImV4cCI6MTU3NTExODM4MX0.4NVC01QfHHRnyfRxavUrzWVqsdEZXRHchfRRRkmRkSU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"full_name\":\"Nguyễn thị tý\",\n\t\"phoneNumber\": \"0123456789\",\n\t\"startDate\": \"2019-11-23T13:51:48.400Z\",\n\t\"endDate\": \"2019-11-23T13:51:48.400Z\",\n\t\"sex_type\": \"false\",\n\t\"address\": \"Hà nội\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/update-profile/5dd939740caf3063c050410e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"update-profile",
+						"5dd939740caf3063c050410e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/block-account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzQ1MTM1ODEsImV4cCI6MTU3NTExODM4MX0.4NVC01QfHHRnyfRxavUrzWVqsdEZXRHchfRRRkmRkSU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"blocked\": \"true\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/block-account/5dd9395b0caf3063c0504109",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"block-account",
+						"5dd9395b0caf3063c0504109"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interShip/active?page=1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"blocked\": false,\n\t\"sort\": {\n\t\t\"startDate\": -1,\n\t\t\"endDate\": -1,\n\t\t\"full_name\": -1,\n\t\t\"phoneNumber\": -1,\n\t\t\"email\": -1,\n\t\t\"username\": -1\n\t},\n\t\"filter\": {\n\t\t\"startDate\": \"2019-01-27T08:42:25.397Z\",\n\t\t\"endDate\" : \"2020-12-28T08:42:25.397Z\",\n\t\t\"full_name\": \"Phạm Xuân Duy\",\n\t\t\"phoneNumber\": \"012\",\n\t\t\"email\": \"6@gmail.com\",\n\t\t\"username\": \"6\"\n\t},\n\t\"pagination\": {\n\t\t\"pageSize\": 10,\n\t\t\"page\": 1\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/interShip/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"interShip",
+						"get"
+					],
+					"query": [
+						{
+							"key": "phoneNumber",
+							"value": "asc",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "desc",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "asc",
+							"disabled": true
+						},
+						{
+							"key": "full_name",
+							"value": "desc",
+							"disabled": true
+						},
+						{
+							"key": "startDate",
+							"value": "asc",
+							"disabled": true
+						},
+						{
+							"key": "endDate",
+							"value": "desc",
+							"disabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "012",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "6",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "6@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "full_name",
+							"value": "Phạm Xuân Duy",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interShip",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"intership2\",\n\t\"email\":\"intership2@gmail.com\",\n\t\"password\":\"12345678\",\n\t\"full_name\":\"Inter ship 2\",\n\t\"sex_type\": true,\n\t\"address\":\"Dũng sĩ - Thanh Khê - Đà nẵng\",\n\t\"university\": \"Duy Tan\",\n\t\"phoneNumber\":\"0865675232\",\n\t\"position_apply\": \"Reactjs\",\n    \"time_interShip\": 3,\n    \"startDate\": \"2019-11-23T08:03:18.612+00:00\",\n    \"endDate\": \"2019-11-23T08:03:18.612+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/interShip/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"interShip",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interShip/:interShipId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzQ1MTM1ODEsImV4cCI6MTU3NTExODM4MX0.4NVC01QfHHRnyfRxavUrzWVqsdEZXRHchfRRRkmRkSU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/interShip/5de088d599904808dc45f2f8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"interShip",
+						"5de088d599904808dc45f2f8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interShip/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/interShip/remove/5dd939c40caf3063c050411e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"interShip",
+						"remove",
+						"5dd939c40caf3063c050411e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interShip/update-profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"inter1@gmail.com\",\n    \"username\": \"intership1\",\n    \"full_name\": \"intership1\",\n    \"address\": \"Lào\",\n    \"phoneNumber\": \"0258963741\",\n    \"startDate\": \"2019-02-23T08:03:18.612Z\",\n    \"endDate\": \"2019-05-23T08:03:18.612Z\",\n    \"sex_type\": true,\n    \"position_apply\": \"Vuejs\",\n    \"time_interShip\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/interShip/update/5de088d599904808dc45f2f8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"interShip",
+						"update",
+						"5de088d599904808dc45f2f8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interShip/blocked",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"blocked\": \"true\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/interShip/blocked/5dda98275f167b231c1198f5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"interShip",
+						"blocked",
+						"5dda98275f167b231c1198f5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "absence-employee/get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"month\": 12,\n\t\"year\": 2019,\n\t\"sort\": {\n\t\t\"startDate\": -1,\n\t\t\"endDate\": -1\n\t},\n\t\"filter\": {\n\t\t\"startDate\": \"2019-04-27T08:42:25.397Z\",\n\t\t\"endDate\" : \"2019-12-28T08:42:25.397Z\",\n\t\t\"user\": \"P\"\n\t},\n\t\"pagination\": {\n\t\t\"pageSize\": 10,\n\t\t\"page\": 1\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/absence-employee/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"absence-employee",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "absence-employee/post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpZXRAZ21haWwuY29tIiwidXNlcklkIjoiNWRkZTU1MjcwNDRhNzEwMDI0Y2JhMDJmIiwiaWF0IjoxNTc1OTY0MTk4LCJleHAiOjE1NzY1Njg5OTh9.pGccbAqJbO6z4RPjdFGd_fL8iveYKLGHJmh6Iilgh_k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startDate\": \"2019-12-01T08:03:18.612+00:00\",\n\t\"endDate\": \"2019-12-02T08:03:18.612+00:00\",\n\t\"total_absence\": 1,\n\t\"reason\": \"issue ca nhan\",\n\t\"user\": \"5dd9397f0caf3063c0504110\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/absence-employee/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"absence-employee",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "absence-employee/detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/absence-employee/detail/5ddb8edb170b0924b8c91f7e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"absence-employee",
+						"detail",
+						"5ddb8edb170b0924b8c91f7e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "absence-employee/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"reason\": \"ok test\",\n\t\"startDate\": \"2019-08-25T08:42:25.397+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/absence-employee/5ddb8f3f4f6c6c274070f305",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"absence-employee",
+						"5ddb8f3f4f6c6c274070f305"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "absence-employee/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/absence-employee/5ddc97171c9d440000d9b42c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"absence-employee",
+						"5ddc97171c9d440000d9b42c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "absence-employee/statistics",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/absence-employee/statistics-absence?month=12&year=2019",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"absence-employee",
+						"statistics-absence"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "12"
+						},
+						{
+							"key": "year",
+							"value": "2019"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cv-apply",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpZXRAZ21haWwuY29tIiwidXNlcklkIjoiNWRkZTU1MjcwNDRhNzEwMDI0Y2JhMDJmIiwiaWF0IjoxNTc2NTQ4NTMyLCJleHAiOjE1NzcxNTMzMzJ9.JgVLr015buIb3q94FXTfFLeGspHsYWy8qAs2Y5eQKqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"full_name\": \"Nguyễn Quang Hải\",\n\t\"email\": \"quanghai@gmail.com\",\n\t\"phoneNumber\": \"0744148523\",\n\t\"type_apply\": 1,\n\t\"cv_point\": 8,\n\t\"time_interview\": \"2020-01-13T10:58:34.115Z\",\n\t\"cv_pass_fail\" :true,\n\t\"interview_pass_fail\": true,\n\t\"take_interview\": true,\n\t\"url_preview_cv\": \"https://www.youtube.com/watch?v=amKc00_QHew\",\n\t\"position_apply\": \"Ftonend Developer\",\n\t\"createAt\": \"2019-12-01T08:03:18.612+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/cv-apply/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cv-apply",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cv-apply/get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpZXRAZ21haWwuY29tIiwidXNlcklkIjoiNWRkZTU1MjcwNDRhNzEwMDI0Y2JhMDJmIiwiaWF0IjoxNTc2NTQ4NTMyLCJleHAiOjE1NzcxNTMzMzJ9.JgVLr015buIb3q94FXTfFLeGspHsYWy8qAs2Y5eQKqo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sort\": {\n\t\t\"full_name\": -1\n\t},\n\t\"filter\": {\n\t\t\"position_apply\": \"FullStack Developer\",\n\t\t\"cv_pass_fail\" : true,\n\t\t\"full_name\": \"Đặng Văn Lâm\",\n\t\t\"phoneNumber\": \"0955214785\",\n\t\t\"email\": \"vanlam@gmail.com\",\n\t\t\"type_apply\": 1,\n\t\t\"interview_pass_fail\": false\n\t},\n\t\"pagination\": {\n\t\t\"pageSize\": 10,\n\t\t\"page\": 1\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/cv-apply/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cv-apply",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cv-apply/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"full_name\": \"Update xong xóa\",\n\t\"email\": \"quanghai@gmail.com\",\n\t\"phoneNumber\": \"0544148523\",\n\t\"type_apply\": 1,\n\t\"cv_point\": 8,\n\t\"time_interview\": \"2020-01-12T10:58:34.115Z\",\n\t\"cv_pass_fail\" :true,\n\t\"interview_pass_fail\": true,\n\t\"take_interview\": true,\n\t\"url_preview_cv\": \"https://www.youtube.com/watch?v=amKc00_QHew\",\n\t\"position_apply\": \"Ftonend Developer\",\n\t\"createAt\": \"2019-12-01T08:03:18.612+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/cv-apply/5de24c1a98347824183d9313",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cv-apply",
+						"5de24c1a98347824183d9313"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cv-apply/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzQ1MTM1ODEsImV4cCI6MTU3NTExODM4MX0.4NVC01QfHHRnyfRxavUrzWVqsdEZXRHchfRRRkmRkSU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/cv-apply/5de24c1a98347824183d9313",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cv-apply",
+						"5de24c1a98347824183d9313"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cv-apply/detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/cv-apply/5de24cad98347824183d9314",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cv-apply",
+						"5de24cad98347824183d9314"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cv-apply/options/position-apply",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/cv-apply/options/position-apply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cv-apply",
+						"options",
+						"position-apply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cv-apply/statistics",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxMTg1MjUsImV4cCI6MTU3NTcyMzMyNX0.pUsPucF2sMG1fTMabaMZq4koWWMwgKrtmZa0kNRViGY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/cv-apply/statistics/cv-apply?year=2019&month=11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cv-apply",
+						"statistics",
+						"cv-apply"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2019"
+						},
+						{
+							"key": "month",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salary-employee/get-all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sort\": {\n\t\t\"payment_salary_date\": -1,\n\t\t\"user\": -1\n\t},\n\t\"filter\": {\n\t\t\"user\": \"C\",\n\t\t\"payment_salary_date\": \"2019-10-10T13:51:59.857Z\"\n\t},\n\t\"pagination\": {\n\t\t\"pageSize\": 10,\n\t\t\"page\": 1\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/salary-employee/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"salary-employee",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salary-employee/detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUxNzA2NzMsImV4cCI6MTU3NTc3NTQ3M30.PlLG3fTl8-VYFOHUexpofzATJtqill14Tw-M92jecKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/salary-employee/detail/5de479a5c45877418c3c94e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"salary-employee",
+						"detail",
+						"5de479a5c45877418c3c94e1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salary-employee/post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUyNTM0NjcsImV4cCI6MTU3NTg1ODI2N30.R_R1tM_XVC3yGmUyhSXFwxcptmQWFzfXPPcB7BATpI0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"salary_basic\": \"165000000\",\n\t\"subsidize\": \"1410000\",\n\t\"total_salary\": \"\",\n\t\"payment_salary_date\": \"2019-10-10T13:51:59.857Z\",\n\t\"notes\": \"Lương tháng 09 + trợ cấp\",\n\t\"user\": \"5dd939700caf3063c050410d\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/salary-employee/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"salary-employee",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salary-employee/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzUyNTM0NjcsImV4cCI6MTU3NTg1ODI2N30.R_R1tM_XVC3yGmUyhSXFwxcptmQWFzfXPPcB7BATpI0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/salary-employee/delete/5de479703284034a80a04543",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"salary-employee",
+						"delete",
+						"5de479703284034a80a04543"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salary-employee/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGQ4ZTdjNjAwZTM1YzNkODA4Mjc0NjYiLCJpYXQiOjE1NzU0NzA2MjIsImV4cCI6MTU3NjA3NTQyMn0.hF8iSFzUJu2EcCBqH5WtnalLblPhYzFL_JL5VKbRLzM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"salary_basic\": \"1234\",\n\t\"subsidize\": \"3214\",\n\t\"total_salary\": \"\",\n\t\"payment_salary_date\": \"2019-10-10T13:51:59.857Z\",\n\t\"notes\": \"Lương tháng 12 + trợ cấp\",\n\t\"user\": \"5dd939700caf3063c050410d\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/salary-employee/update/5de479583284034a80a04542",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"salary-employee",
+						"update",
+						"5de479583284034a80a04542"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "statistics-salary?month=9&year=2019",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/salary-employee/statistics-salary?month=12&year=2019",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"salary-employee",
+						"statistics-salary"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "12"
+						},
+						{
+							"key": "year",
+							"value": "2019"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "labor-contracts/get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sort\": {\n\t\t\"full_name\": -1,\n\t\t// Tùy trường nào muốn sort thì handle ở đây\n\t},\n\t\"filter\": {\n\t\t\"full_name\": \"Phạm Xuân Duy\",\n\t\t\"phoneNumber\": \"0865675232\",\n\t\t\"startDate\": \"\",\n\t\t\"city_birth\": \"\",\n\t\t\"permanent_address\": \"\",\n\t\t\"temporary_address\": \"\",\n\t\t\"position\": \"\",\n\t\t\"contract_number\": \"\",\n\t\t\"status\": \"\"\n\t},\n\t\"pagination\": {\n\t\t\"pageSize\": 10,\n\t\t\"page\": 1\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/labor-contracts/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"labor-contracts",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "labor-contracts/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"full_name\":\"Nguyễn Công Phượng\",\n\t\"birthday\": \"1996-09-28T00:00:00.000Z\",\n\t\"city_birth\": \"Huê\",\n\t\"phoneNumber\": \"0865675232\",\n\t\"permanent_address\": \"Phường A, Quận B, Huế\",\n\t\"temporary_address\": \"Phường C, Quận D, Đà Nẵng\",\n\t\"identity_card\": 191989888,\n\t\"date_of_issue\": \"2019-09-28T00:00:00.000Z\",\n\t\"startDate\": \"2019-07-28T00:00:00.000Z\",\n\t\"endDate\": \"2020-12-28T00:00:00.000Z\",\n\t\"position\": \"Developer\",\n\t\"status\": true,\n\t\"notes\": \"\",\n\t\"contract_number\": \"Số 2/HĐLĐ-LML/2018\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/labor-contracts/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"labor-contracts",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "labor-contracts/detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/labor-contracts/detail/5df9f4758005978588c9dbd5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"labor-contracts",
+						"detail",
+						"5df9f4758005978588c9dbd5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "labor-contracts/update/5df9f4758005978588c9dbd5",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"full_name\":\"Nguyễn Công Phượng\",\n\t\"birthday\": \"1996-09-28T00:00:00.000Z\",\n\t\"city_birth\": \"Nghệ An\",\n\t\"phoneNumber\": \"0123456789\",\n\t\"permanent_address\": \"Phường A, Quận B, Huế\",\n\t\"temporary_address\": \"Phường C, Quận D, Đà Nẵng\",\n\t\"identity_card\": 191989888,\n\t\"date_of_issue\": \"2019-09-28T00:00:00.000Z\",\n\t\"startDate\": \"2019-07-28T00:00:00.000Z\",\n\t\"endDate\": \"2020-12-28T00:00:00.000Z\",\n\t\"position\": \"Developer\",\n\t\"status\": true,\n\t\"notes\": \"\",\n\t\"contract_number\": \"Số 2/HĐLĐ-LML/2018\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/labor-contracts/update/5df9f4758005978588c9dbd5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"labor-contracts",
+						"update",
+						"5df9f4758005978588c9dbd5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "labor-contracts/delete/5df9f7e7c25351ae54be9a1d",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/labor-contracts/delete/5df9f7e7c25351ae54be9a1d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"labor-contracts",
+						"delete",
+						"5df9f7e7c25351ae54be9a1d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bill/update/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"contract_code\": \"HT-ABCDE\",\n\t\"content_requires_payment\": \"Công Ty HT Active \",\n\t\"code_bill\": \"1234567\",\n\t\"biller\": \"Thuận H Đứcồ\",\n\t\"date_export\": \"2019-09-28T00:00:00.000Z\",\n\t\"amount\": 1234567890,\n\t\"status_bill\": true,\n\t\"contract_status\": false,\n\t\"notes\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bill/update/5dfa00ad41eac089807985fe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bill",
+						"update",
+						"5dfa00ad41eac089807985fe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bill/detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/bill/detail/5dfa00ad41eac089807985fe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bill",
+						"detail",
+						"5dfa00ad41eac089807985fe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bill/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"contract_code\": \"HT-ASIANTECH\",\n\t\"content_requires_payment\": \"Công Ty HT Active \",\n\t\"code_bill\": \"1234567\",\n\t\"biller\": \"Thuận Hồ\",\n\t\"date_export\": \"2019-12-28T00:00:00.000Z\",\n\t\"amount\": 5415000000,\n\t\"status_bill\": true,\n\t\"contract_status\": false,\n\t\"notes\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bill/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bill",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bill/get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sort\": {\n\t\t\"date_export\": -1\n\t},\n\t\"filter\": {\n\t\t\"date_export\": \"2019-12-28T00:00:00.000Z\",\n\t\t\"contract_code\": \"HT-dsa\",\n\t\t\"content_requires_payment\": \"\",\n\t\t\"biller\": \"\",\n\t\t\"code_bill\": \"\",\n\t\t\"status_bill\": \"\",\n\t\t\"contract_status\": \"\"\n\t},\n\t\"pagination\": {\n\t\t\"pageSize\": 10,\n\t\t\"page\": 1\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bill/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bill",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bill/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/bill/delete/5dfa00ad41eac089807985fe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bill",
+						"delete",
+						"5dfa00ad41eac089807985fe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "economic-contracts/get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sort\": {\n\t\t\"contract_Code\": -1\n\t},\n\t\"filter\": {\n\t\t\"sign_day\": \"2019-02-12T00:00:00.000Z\",\n\t\t\"acceptance_day\": \"2019-03-13T00:00:00.000Z\",\n\t\t\"liquidation_day\": \"2019-05-13T00:00:00.000Z\",\n\t\t\"contract_Code\": \"Hợp đồng ABC\",\n\t\t\"name_contract\": \"Hợp đồng ABC\",\n\t\t\"partner\": \"VOOC\",\n\t\t\"appendix_number\": 4\n\t},\n\t\"pagination\": {\n\t\t\"pageSize\": 10,\n\t\t\"page\": 1\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/economic-contracts/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"economic-contracts",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "economic-contracts/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"contract_Code\": \"HT-NTX-2019/841\",\n\t\"name_contract\": \"Hợp đồn RIKKIE\",\n\t\"partner\": \"RIKKIE\",\n\t\"sign_day\": \"2019-05-12T00:00:00.000Z\",\n\t\"acceptance_day\": \"2019-09-13T00:00:00.000Z\",\n\t\"liquidation_day\": \"2019-12-13T00:00:00.000Z\",\n\t\"contract_value\": 3900000,\n\t\"info_live_partner\": \"HANH, SĐT: 987456321, HR Ht Active\",\n\t\"appendix_number\": 3,\n\t\"notes\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/economic-contracts/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"economic-contracts",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "economic-contracts/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"contract_Code\": \"HT-NTX-2019/123\",\n\t\"name_contract\": \"Hợp đồng ABCIE\",\n\t\"partner\": \"DUY\",\n\t\"sign_day\": \"2019-04-12T00:00:00.000Z\",\n\t\"acceptance_day\": \"2019-08-13T00:00:00.000Z\",\n\t\"liquidation_day\": \"2019-12-31T00:00:00.000Z\",\n\t\"contract_value\": 3900000,\n\t\"info_live_partner\": \"KJ, SĐT: 987456321, HR Ht Active\",\n\t\"appendix_number\": 12,\n\t\"notes\": \"ok done\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/economic-contracts/update/5dfa33abf23cb39f346e9699",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"economic-contracts",
+						"update",
+						"5dfa33abf23cb39f346e9699"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "economic-contracts/detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/economic-contracts/detail/5dfa33abf23cb39f346e9699",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"economic-contracts",
+						"detail",
+						"5dfa33abf23cb39f346e9699"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "economic-contracts/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inh1YW5kdXlybkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZGYxYmY4M2Y0ZGVkMDAwMjRhMTM4YjkiLCJpYXQiOjE1NzY2NjEzMDgsImV4cCI6MTU3NzI2NjEwOH0.48EMW6QN4kmcn4K8Q5QyZWkqBviXBadq-XLPEbEUfq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/economic-contracts/delete/5dfa38af692d867ea421ddb0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"economic-contracts",
+						"delete",
+						"5dfa38af692d867ea421ddb0"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
