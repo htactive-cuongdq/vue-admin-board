@@ -113,22 +113,6 @@ export default {
     onDismissed() {
       this.clearError();
     },
-
-    // // ...mapActions("auth", ["signin", "clearError"]), //modules vuex: auth,  actions: signin
-    // onSignin() {
-    //   const payload = { email: this.email, password: this.password };
-    //   // this.signin(payload); //call actions signin at vuex-authentication
-    // axios.post('https://admin-htactive.herokuapp.com/api/auth/signIn',payload)
-    //   .then(function (response) {
-    //     console.log(response);
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error, 1212);
-    //   });
-    // },
-    // onDismissed() {
-    //   this.clearError();
-    // }
   }
 };
 </script>

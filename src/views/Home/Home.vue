@@ -100,7 +100,7 @@ export default {
         "icon-alt": "mdi-chevron-down",
         text: "Quản lý lương nhân viên",
         model: false,
-        children: [{ text: "Danh sách lương của nhân viên", url: "QLLuong"}]
+        children: [{ text: "Danh sách lương của nhân viên", url: "qlluong"}]
       },
       {
         icon: "mdi-chevron-up",

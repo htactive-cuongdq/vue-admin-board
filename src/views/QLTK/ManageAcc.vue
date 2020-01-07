@@ -1,6 +1,9 @@
 <template>
   <div class>
-    <header-active> <p>Quản lý quyền tài khoản.</p></header-active>
+    <header-active>
+      <p>Quản lý quyền tài khoản.</p>
+    </header-active>
+    <show-list-active :HeaderTable="HeaderTable"></show-list-active>
   </div>
 </template>
 <script>

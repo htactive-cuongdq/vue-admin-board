@@ -1,9 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home/Home.vue'
-import Active from '../views/QLTK/Active.vue'
-import Block from '../views/QLTK/Block.vue'
+// import Active from '../views/QLTK/Active.vue'
+import Active from '../views/dashboard/users/UsersActive.vue'
+import Block from '../views/dashboard/users/UsersBlock.vue'
+
+// import Block from '../views/QLTK/Block.vue'
 import ManageAcc from '../views/QLTK/ManageAcc.vue'
+import QLLuong from '../views/dashboard/salarys/Salarys.vue'
 import Signup from '../views/Security/Signup.vue'
 import Signin from '../views/Security/Signin.vue'
 
@@ -38,6 +42,12 @@ const routes = [{
                 name: 'manageacc',
                 component: ManageAcc
             },
+            {
+                path: '/qlluong',
+                name: 'qlluong',
+                component: QLLuong
+            },
+
 
         ]
     },
