@@ -6,7 +6,7 @@
         <v-btn class="primary" to="#">
           <v-icon left>mdi-account-plus-outline</v-icon>Add New Employee
         </v-btn>
-      </v-col> -->
+      </v-col>-->
       <div>
         <v-data-table
           :headers="headers"
@@ -26,15 +26,12 @@
           <template v-slot:body="{ items }">
             <tbody>
               <tr v-for="item in items" :key="item.username">
-                <td>{{ item.username }}</td>
-                <td>{{ item.full_name }}</td>
-                <td>{{ item.email }}</td>
-                <td>{{ item.phoneNumber }}</td>
+                <td>{{item.user && item.user.full_name}}</td>
+                <td>{{ item.total_salary }}</td>
+                <td>{{ item.payment_salary_date }}</td>
+                <td>{{ item.updateAt }}</td>
 
                 <td class="d-flex justify-center align-center">
-                  <v-btn text to="#">
-                    <v-icon>mdi-lock-outline</v-icon>
-                  </v-btn>
                   <v-btn text to="#">
                     <v-icon>mdi-trash-can-outline</v-icon>
                   </v-btn>
@@ -56,11 +53,11 @@ export default {
   components: { SalarysSearch },
   data() {
     return {
-      headers: data.headersSalarysTable
+      headers: data.headersSalarysTable,
     };
   },
   computed: {
-    ...mapGetters("users", {
+    ...mapGetters("salarys", {
       loadingTable: "loading",
       optionsTable: "options",
       totalSalarysTable: "totalSalarys",
@@ -90,7 +87,9 @@ export default {
         this.setTotalSalarysTable(value);
       }
     },
+
     Salarys: {
+
       get() {
         return this.SalarysTable;
       },
@@ -99,26 +98,25 @@ export default {
       }
     }
   },
+
   methods: {
-    ...mapMutations("users", {
+    ...mapMutations("salarys", {
       setLoadingTable: "setLoading",
       setOptionsTable: "setOptions",
       setTotalSalarysTable: "setTotalSalarys",
       setSalarysTable: "setSalarys"
     }),
-    ...mapActions("users", { fetchSalarys: "fetchSalarys" }),
+    ...mapActions("salarys", { fetchSalarys: "fetchSalarys" }),
     search() {
       this.fetchSalarys();
     },
     cancel() {
       this.fetchSalarys();
-    }
+    },
+
   },
   mounted() {
-    console.log('Salarys',Salarys);
-    
     this.fetchSalarys();
-    
   },
   watch: {
     options: {

@@ -110,7 +110,7 @@ export default {
     });
   },
   methods: {
-    ...mapMutations("users", { setFilterUser: "setFilter" }),
+    ...mapMutations("salarys", { setFilterUser: "setFilter" }),
     search() {
       this.setFilterUser(this.filter);
       this.$emit("search");

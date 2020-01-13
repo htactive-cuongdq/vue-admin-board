@@ -117,10 +117,7 @@ export default {
     }
   },
   mounted() {
-    console.log('usersActive',usersActive);
-    
     this.fetchUsersActive();
-    
   },
   watch: {
     options: {

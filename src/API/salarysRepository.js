@@ -1,6 +1,6 @@
 import Repository from './Repository';
 
-const resource = "/salary-employee"
+const resource = "/salary-employee/get"
 
 export default {
     getAllUsers(payload, option) {

@@ -39,6 +39,30 @@
         }
     ],
     "headersSalarysTable": [{
+            "text": "Họ Tên",
+            "align": "left",
+            "value": "hovaten"
+        },
+        {
+            "text": "Tổng lương nhận được",
+            "value": "total_salary"
+        },
+        {
+            "text": "Ngày chuyển lương",
+            "value": "payment_salary_date"
+        },
+        {
+            "text": "Cập nhật cuối",
+            "value": "updateAt"
+        },
+        {
+            "text": "Action",
+            "align": "center",
+            "value": "",
+            "sortable": false
+        }
+    ],
+    "headersInternTable": [{
             "text": "User Name",
             "align": "left",
             "value": "username"
@@ -48,11 +72,24 @@
             "value": "full_name"
         },
         {
+            "text": "Sex",
+            "value": "sex_type",
+            "sortable": false
+        },
+        {
             "text": "Email",
             "value": "email"
         },
         {
             "text": "Phone Number",
+            "value": "phoneNumber"
+        },
+        {
+            "text": "Ngày bắt đầu",
+            "value": "phoneNumber"
+        },
+        {
+            "text": "Ngày kết thúc",
             "value": "phoneNumber"
         },
         {

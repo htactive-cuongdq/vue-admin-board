@@ -8,6 +8,10 @@ import Block from '../views/dashboard/users/UsersBlock.vue'
 // import Block from '../views/QLTK/Block.vue'
 import ManageAcc from '../views/QLTK/ManageAcc.vue'
 import QLLuong from '../views/dashboard/salarys/Salarys.vue'
+import TtsinhActive from '../views/dashboard/interns/InternActive.vue'
+import TtsinhBlock from '../views/dashboard/interns/InternBlock.vue'
+
+
 import Signup from '../views/Security/Signup.vue'
 import Signin from '../views/Security/Signin.vue'
 
@@ -46,6 +50,16 @@ const routes = [{
                 path: '/qlluong',
                 name: 'qlluong',
                 component: QLLuong
+            },
+            {
+                path: '/TtsinhActive',
+                name: 'TtsinhActive',
+                component: TtsinhActive
+            },
+            {
+                path: '/TtsinhBlock',
+                name: 'TtsinhBlock',
+                component: TtsinhBlock
             },
 
 

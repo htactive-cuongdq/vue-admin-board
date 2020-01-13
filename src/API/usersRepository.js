@@ -11,5 +11,15 @@ export default {
             .catch(error => {
                 return error.response.data;
             })
+    },
+
+    blockUser(payload) {
+        return Repository.post(`${resource}//block-account/`, payload)
+            .then(response => {
+                return response.data
+            })
+            .catch(error => {
+                return error.response.data;
+            });
     }
 }

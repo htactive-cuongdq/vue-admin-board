@@ -61,15 +61,16 @@
       </div>
       <div class="col-md-9">
         <div class="row d-flex flex-row-reverse">
-          <v-btn
-            style="margin-top: 3px; margin-left:5px"
-            v-on:click="router.push({ name: 'login'}) "
-          >LogOut</v-btn>
-          <v-btn style="margin-top: 3px; margin-left:5px">User</v-btn>
+            <div>
+              <v-avatar class="mx-3">
+                <v-img src="http://streaming1.danviet.vn/upload/1-2019/images/2019-02-28/50669947_953631174840947_3472320706212003840_n-1551330025-width500height500.jpg" alt="Duc Huy" />
+              </v-avatar>
+              <strong class="mx-2">Đặng Cường</strong>
+            </div>
         </div>
       </div>
     </v-app-bar>
-      <router-view></router-view>
+    <router-view></router-view>
     <v-footer app>
       <span>&copy; 2019</span>
     </v-footer>
@@ -91,8 +92,7 @@ export default {
         model: false,
         children: [
           { text: "Tài khoản đang hoạt động", url: "active" },
-          { text: "Tài khoản đang bị khóa", url: "block" },
-          { text: "Quản lý quyền tài khoản", url: "manageacc" }
+          { text: "Tài khoản đã rời công ty", url: "block" }
         ]
       },
       {
@@ -100,7 +100,7 @@ export default {
         "icon-alt": "mdi-chevron-down",
         text: "Quản lý lương nhân viên",
         model: false,
-        children: [{ text: "Danh sách lương của nhân viên", url: "qlluong"}]
+        children: [{ text: "Danh sách lương của nhân viên", url: "qlluong" }]
       },
       {
         icon: "mdi-chevron-up",
@@ -108,33 +108,33 @@ export default {
         text: "Quản lý thực tập sinh",
         model: false,
         children: [
-          { text: "Thực tập sinh đang hoạt động", url: "InternActive" },
-          { text: "Thực tập sinh đã rời công ty", url: "InternBlock" }
+          { text: "Thực tập sinh đang hoạt động", url: "TtsinhActive" },
+          { text: "Thực tập sinh đã rời công ty", url: "TtsinhBlock" }
         ]
       },
-      {
-        icon: "mdi-chevron-up",
-        "icon-alt": "mdi-chevron-down",
-        text: "Quản lý ngày vắng",
-        model: false,
-        children: [
-          { text: "Thống kê ngày vắng" },
-          { text: "Danh sách nhân viên vắng" },
-          { text: "Danh sách thực tập sinh vắng" }
-        ]
-      },
-      {
-        icon: "mdi-chevron-up",
-        "icon-alt": "mdi-chevron-down",
-        text: "Quản lý CV",
-        model: false,
-        children: [
-          { text: "Thống kê CV" },
-          { text: "Danh sách CV nộp vào công ty" },
-          { text: "CV Thực tập" },
-          { text: "CV Nhân viên" }
-        ]
-      },
+      // {
+      //   icon: "mdi-chevron-up",
+      //   "icon-alt": "mdi-chevron-down",
+      //   text: "Quản lý ngày vắng",
+      //   model: false,
+      //   children: [
+      //     { text: "Thống kê ngày vắng" },
+      //     { text: "Danh sách nhân viên vắng" },
+      //     { text: "Danh sách thực tập sinh vắng" }
+      //   ]
+      // },
+      // {
+      //   icon: "mdi-chevron-up",
+      //   "icon-alt": "mdi-chevron-down",
+      //   text: "Quản lý CV",
+      //   model: false,
+      //   children: [
+      //     { text: "Thống kê CV" },
+      //     { text: "Danh sách CV nộp vào công ty" },
+      //     { text: "CV Thực tập" },
+      //     { text: "CV Nhân viên" }
+      //   ]
+      // },
 
       { icon: "mdi-settings", text: "LogOut" }
     ]
